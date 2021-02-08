@@ -24,5 +24,5 @@ export default () => {
     });
   }
 
-  menuLinks[0].classList.add(`active`)
+  menuLinks[0].classList.add(`active`);
 };

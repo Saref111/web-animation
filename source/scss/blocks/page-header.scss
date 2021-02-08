@@ -111,6 +111,7 @@
   }
 
   .page-header--menu-opened & {
+
     &::before,
     &::after {
       top: 50%;
@@ -241,16 +242,18 @@
     display: block;
     color: inherit;
     padding: 0 0.5em 0.5em;
+    transition: color ease 700ms;
 
     &::after {
       content: "";
       position: absolute;
       bottom: 0;
-      width: 100%;
+      width: 0;
       height: 2px;
       background-color: $c-light;
-      display: none;
+      display: block;
       left: 0;
+      transition: background-color ease 700ms, width step-end;
 
       @media (min-width: $stop-scaling) {
         left: -5px;
@@ -272,7 +275,8 @@
 
     &.active {
       &::after {
-        display: block;
+        width: 100%;
+        transition: background-color ease 700ms, width ease 700ms;
       }
     }
 

@@ -95,7 +95,7 @@
   line-height: 1.27;
   transform: translateY(30px);
   opacity: 0;
-  transition: opacity 500ms ease, transform 500ms ease-in-out ;
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out ;
   transition-delay: 300ms;
 
   @media (min-width: $stop-scaling) {

@@ -37,7 +37,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
-    transition: width ease-in 300ms, height ease-in 300ms;
+    transition: width 300ms ease-in, height 300ms ease-in;
   }
 
   svg {
@@ -65,7 +65,7 @@
       border-color: $c-purple;
     }
 
-    & + .social-block__list {
+    &+.social-block__list {
       opacity: 1;
       pointer-events: auto;
       height: 300%;
@@ -87,7 +87,7 @@
 
 .social-block__list {
   @include list-reset;
-  transition: height ease-in 300ms, opacity ease-in 300ms;
+  transition: height 300ms ease-in, opacity 300ms ease-in;
   position: absolute;
   top: 100%;
   right: 0;
@@ -175,7 +175,7 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
-  transition: color ease-in 300ms;
+  transition: color 300ms ease-in;
 
   @media (min-width: $stop-scaling) {
     width: 40px;

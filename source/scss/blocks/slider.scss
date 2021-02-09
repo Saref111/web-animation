@@ -90,11 +90,14 @@
 }
 
 .slider__item-text {
-  margin-top: 3.6rem;
   margin-bottom: 0;
   max-width: 34rem;
   font-size: 1.8rem;
   line-height: 2rem;
+  opacity: 0;
+  margin-top: 5rem;
+  transition: opacity ease-in-out 500ms, margin-top ease-in-out 500ms;
+  transition-delay: 300ms;
 
   @media (min-width: $stop-scaling) {
     margin-top: 36px;
@@ -121,6 +124,15 @@
     min-height: 14rem;
     font-size: 1.4rem;
     line-height: 1.5rem;
+  }
+
+  .screen.active .swiper-slide-active & {
+    margin-top: 3.6rem;
+    opacity: 1;
+  }
+  .screen.active .swiper-slide-next & {
+    margin-top: 3.6rem;
+    opacity: 1;
   }
 }
 

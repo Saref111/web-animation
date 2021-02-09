@@ -93,6 +93,10 @@
   text-transform: uppercase;
   font-size: 2.4rem;
   line-height: 1.27;
+  transform: translateY(30px);
+  opacity: 0;
+  transition: opacity 500ms ease, transform 500ms ease-in-out ;
+  transition-delay: 300ms;
 
   @media (min-width: $stop-scaling) {
     width: 509px;
@@ -115,15 +119,14 @@
 
   p {
     margin: 0;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity ease-in-out 500ms, transform ease-in-out 500ms;
   }
 
-  p.shown {
+  .screen--hidden & {
+    opacity: 0;
+  }
+  .screen.active & {
     opacity: 1;
-    margin-top: 0;
-    transform: translateY(0);
+    transform: none;
   }
 
   svg {

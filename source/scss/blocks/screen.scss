@@ -42,12 +42,17 @@
 
 .screen__footer {
   position: absolute;
-  bottom: 0;
+  bottom: -100px;
   left: 0;
   right: 0;
   color: $c-dark;
   background-color: $c-light;
   z-index: 1;
+
+  .body-loaded & {
+    bottom: 0;
+    transition: bottom ease-out 0.5s;
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     width: 3.5rem;
@@ -304,7 +309,21 @@
 }
 
 .screen--prizes {
-  background-color: $c-dark;
+  background-color: $c-purple;
+
+  & .background {
+    width: 100%;
+    position: absolute;
+    height: 0;
+    bottom: 0;
+    background-color: $c-dark;
+    z-index: 0;
+  }
+
+  &.active .background {
+    height: 100vh;
+    transition: height ease 0.3s;
+  }
 }
 
 .screen--game {

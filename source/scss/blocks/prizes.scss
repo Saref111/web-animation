@@ -4,6 +4,7 @@
   flex-direction: column;
   padding: 14.6rem 0 7.7rem;
   width: 100%;
+  position: relative;
 
   @media (min-width: $stop-scaling) {
     padding: 146px 0 65px;

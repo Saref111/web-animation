@@ -1,9 +1,8 @@
 export default () => {
-  const introTextElement = document.querySelector(`.intro__message`);
-  const introTextParagraphElement = introTextElement.querySelector(`P`);
+  const bodyElement = document.querySelector(`BODY`);
 
   setTimeout(() => {
-    introTextParagraphElement.classList.add(`shown`);
-  }, 500);
+    bodyElement.classList.add(`body-loaded`)
+  }, 100);
 };
 

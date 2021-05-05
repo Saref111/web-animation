@@ -54,6 +54,8 @@ export default class FullPageScroll {
     if (activeItem) {
       this.menuElements.forEach((item) => item.classList.remove(`active`));
       activeItem.classList.add(`active`);
+      const event = new CustomEvent(`change-screen`, {bubbles: true});
+      activeItem.dispatchEvent(event);
     }
   }
 

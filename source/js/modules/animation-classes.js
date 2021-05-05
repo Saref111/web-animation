@@ -1,7 +1,7 @@
 export default () => {
   const bodyElement = document.querySelector(`BODY`);
   const ruleTextElement = document.querySelector(`.rules__item p`);
-  const rulesButtonElement = document.querySelector(`.rules__link.btn`)
+  const rulesButtonElement = document.querySelector(`.rules__link.btn`);
 
   setTimeout(() => {
     bodyElement.classList.add(`body-loaded`);

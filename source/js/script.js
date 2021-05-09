@@ -25,6 +25,7 @@ animationClasses();
 const animatedTitle = document.querySelector(`.intro__title`);
 const animatedDate = document.querySelector(`.intro__date`);
 lettersAnimation(animatedTitle, {
+  delayModifier: 0,
   word: `overflow:hidden;display:flex;padding-top:40px;`,
   letterFrom: `transform:translate3d(0,200px,0);
               transition-property:transform;

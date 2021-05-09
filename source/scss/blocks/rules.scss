@@ -252,24 +252,3 @@
   }
 }
 
-@keyframes showing-text {
-  from {
-    opacity: 0;
-    left: 30px;
-  }
-
-  to {
-    opacity: 1;
-    left: 0;
-  }
-}
-
-@keyframes showing-circle {
-  from {
-    transform: scale(0, 0);
-  }
-
-  to {
-    transform: scale(100%, 100%);
-  }
-}

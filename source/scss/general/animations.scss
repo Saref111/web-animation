@@ -1,0 +1,34 @@
+@keyframes showing-text {
+  from {
+    opacity: 0;
+    left: 30px;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@keyframes showing-circle {
+  from {
+    transform: scale(0, 0);
+  }
+
+  to {
+    transform: scale(100%, 100%);
+  }
+}
+
+@keyframes translate {
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rolling-slider-button {
+  to {
+    background-color: rgba(255, 255, 255, 1);
+    transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, 0deg);
+  }
+}

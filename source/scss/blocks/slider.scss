@@ -97,7 +97,7 @@
   opacity: 0;
   margin-top: 3.6rem;
   transform: translateX(20px);
-  transition: opacity 500ms ease-in-out , transform 500ms ease-in-out;
+  transition: opacity 500ms ease-in-out, transform 500ms ease-in-out;
   transition-delay: 300ms;
 
   @media (min-width: $stop-scaling) {
@@ -131,6 +131,7 @@
     transform: translateX(0);
     opacity: 1;
   }
+
   .screen.active .swiper-slide-next & {
     transform: translateX(0);
     opacity: 1;
@@ -167,6 +168,21 @@
   width: 4rem;
   height: 4rem;
   color: $c-dark;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 50%;
+  animation-duration: 500ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.42, 0, 0.63, 1.21);
+
+  .active &--prev {
+    animation-name: rolling-slider-button;
+    transform: translate3d(-80px, 0, 0) rotate3d(0, 0, 1, -360deg);
+  }
+
+  .active &--next {
+    animation-name: rolling-slider-button;
+    transform: translate3d(80px, 0, 0) rotate3d(0, 0, 1, 360deg);
+  }
 
   @media (min-width: $stop-scaling) {
     width: 40px;
